@@ -103,7 +103,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-app = Flask(__name__)
+#app = Flask(__name__)
 
 # Azure Table Storage connection
 connection_string = os.getenv("AZURE_STORAGE_CONNECTION_STRING")
@@ -218,4 +218,4 @@ def verify_otp():
         return jsonify({"message": "Invalid OTP"}), 400
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
